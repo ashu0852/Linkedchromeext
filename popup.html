@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🚀 Kleo</h1>
+      <p>LinkedIn Content Discovery</p>
+    </div>
+    
+    <div class="search-section">
+      <input type="text" id="search-input" placeholder="Search LinkedIn posts...">
+      <button id="search-btn">🔍</button>
+    </div>
+    
+    <div class="filters">
+      <select id="content-type">
+        <option value="all">All Content Types</option>
+        <option value="text">📝 Text Posts</option>
+        <option value="image">🖼️ Image Posts</option>
+        <option value="video">🎥 Video Posts</option>
+        <option value="carousel">📱 Carousel Posts</option>
+      </select>
+      
+      <select id="time-range">
+        <option value="day">Last 24 Hours</option>
+        <option value="week">Last Week</option>
+        <option value="month">Last Month</option>
+        <option value="year">Last Year</option>
+      </select>
+    </div>
+    
+    <div class="action-buttons">
+      <button id="analyze-creator" class="btn-primary">
+        📊 Analyze Current Creator
+      </button>
+      <button id="show-trending" class="btn-secondary">
+        🔥 Show Trending Posts
+      </button>
+      <button id="saved-posts" class="btn-secondary">
+        💾 Saved Posts (<span id="saved-count">0</span>)
+      </button>
+    </div>
+    
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Analyzing content...</p>
+    </div>
+    
+    <div id="results" class="results"></div>
+    
+    <div class="footer">
+      <p>Built with ❤️ for LinkedIn creators</p>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
